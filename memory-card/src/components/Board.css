@@ -9,3 +9,9 @@
   margin-inline: auto; /* Center horizontally (works with max-width) */
   padding-inline: 1rem; /* Prevent edge touching on small screens */
 }
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

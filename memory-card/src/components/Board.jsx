@@ -5,7 +5,20 @@ import { GiphyFetch } from "@giphy/js-fetch-api";
 
 const gf = new GiphyFetch("8HHHmXteYm004PapntSOri2fQ1dZ5fiF");
 
-const gifIds = ["xT1R9YybND9riBzeY8"];
+const gifIds = [
+  "xT1R9YybND9riBzeY8",
+  "26Ff54K3oSzFs2vxS",
+  "26FfejaClGnf2nuSI",
+  "xUNd9RWetmIHTCoANi",
+  "l3fzBErlK6dj1dNfi",
+  "3o6nV6RVUkMMPVap7a",
+  "xUNd9UO7sUPu2BzXpe",
+  "d7YY3qdChSuWiGXyu9",
+  "l3fzV9brAmIT9EuJO",
+  "l3fzLmVfDnnnk2S6A",
+  "xT1R9Io0FMFsEMNovC",
+  "xUNda8bkjMOW4pi7AI",
+];
 
 const Board = () => {
   const [gifs, setGifs] = useState([]);
