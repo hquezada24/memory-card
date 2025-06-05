@@ -1,8 +1,9 @@
 .board {
+  margin: 2rem;
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 1.5rem; /* Spacing between items */
   max-width: 1200px; /* Optional: Prevent grid from stretching too wide */
   margin-inline: auto; /* Center horizontally (works with max-width) */
