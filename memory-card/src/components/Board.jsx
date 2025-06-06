@@ -21,7 +21,7 @@ const gifIds = [
   "xUNda8bkjMOW4pi7AI",
 ];
 
-const Board = ({ score, setScore }) => {
+const Board = ({ score, setScore, setBestScore }) => {
   const [gifs, setGifs] = useState([]);
   const [clickedIds, setClickedIds] = useState(new Set());
 
@@ -37,6 +37,7 @@ const Board = ({ score, setScore }) => {
     if (clickedIds.has(id)) {
       alert(`Game over! You clicked the same image. Your score: ${score}`);
       setClickedIds(new Set());
+      setBestScore((prev) => (prev > score ? prev : score));
       setScore(0);
     } else {
       const newClicked = new Set(clickedIds);

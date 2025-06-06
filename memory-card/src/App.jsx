@@ -6,10 +6,11 @@ import "./App.css";
 
 function App() {
   const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
   return (
     <>
-      <Header score={score} />
-      <Board score={score} setScore={setScore} />
+      <Header score={score} bestScore={bestScore} />
+      <Board score={score} setScore={setScore} setBestScore={setBestScore} />
       <Footer />
     </>
   );
