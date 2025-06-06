@@ -23,6 +23,8 @@ const gifIds = [
 
 const Board = () => {
   const [gifs, setGifs] = useState([]);
+  const [clickedIds, setClickedIds] = useState(new Set());
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     async function fetchGIFs() {
