@@ -34,15 +34,25 @@ const Board = () => {
     fetchGIFs();
   }, []);
 
-  const handleShuffle = () => {
-    setGifs((prev) => shuffle(prev));
+  const handleClick = (id) => {
+    if (clickedIds.has(id)) {
+      alert("Game over! You clicked the same image");
+      setClickedIds(new Set());
+      setScore(0);
+    } else {
+      const newClicked = new Set(clickedIds);
+      newClicked.add(id);
+      setClickedIds(newClicked);
+      setScore((prev) => prev + 1);
+      setGifs((prev) => shuffle(prev));
+    }
   };
 
   return (
     <>
       <div className="board">
         {gifs.map((gif) => (
-          <Card key={gif.id} onClick={handleShuffle}>
+          <Card key={gif.id} onClick={() => handleClick(gif.id)}>
             <img
               key={gif.id}
               src={gif.images.fixed_height.url}
