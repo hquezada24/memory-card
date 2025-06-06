@@ -1,12 +1,12 @@
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ score }) => {
   return (
     <>
       <header>
         <h1>El Chavo Memory Card</h1>
         <div className="score">
-          <p>Score: </p>
+          <p>Score: {score}</p>
           <p>Best: </p>
         </div>
       </header>

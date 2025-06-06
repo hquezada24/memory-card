@@ -21,10 +21,9 @@ const gifIds = [
   "xUNda8bkjMOW4pi7AI",
 ];
 
-const Board = () => {
+const Board = ({ score, setScore }) => {
   const [gifs, setGifs] = useState([]);
   const [clickedIds, setClickedIds] = useState(new Set());
-  const [score, setScore] = useState(0);
 
   useEffect(() => {
     async function fetchGIFs() {
@@ -36,7 +35,7 @@ const Board = () => {
 
   const handleClick = (id) => {
     if (clickedIds.has(id)) {
-      alert("Game over! You clicked the same image");
+      alert(`Game over! You clicked the same image. Your score: ${score}`);
       setClickedIds(new Set());
       setScore(0);
     } else {
